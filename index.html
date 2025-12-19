@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brototype | Launch Your Tech Career</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="brototype-navbar" id="mainNav">
+        <div class="container nav-wrapper">
+            <div class="nav-left">
+                <a href="#" class="nav-logo">
+                    <span class="logo-text">BROTOTYPE</span>
+                </a>
+                <a href="tel:+917034395811" class="nav-phone-link">
+                    <svg class="phone-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path
+                            d="M6.62 10.79c1.44 2.82 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2zM20 10V7h-3v3h3zM17 10h-3v-3h3v3zM20 7h3v3h-3V7z"
+                            opacity="0" />
+                        <path
+                            d="M6.62 10.79c1.44 2.82 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        <path d="M18.5 4.5v3m1.5-1.5h-3" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span>+91 7034 395 811</span>
+                </a>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="https://study.brototype.com/hiring-page/" class="nav-link hire-link desktop-hire">Hire From
+                    Us</a>
+                <a href="https://brototype.com/careers/" class="nav-link">Careers</a>
+                <a href="https://refer.brototype.com/auth" class="nav-link">Refer & Earn</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="https://study.brototype.com/hiring-page/" class="nav-link mobile-hire-link">Hire From Us</a>
+                <a href="https://brototype.com/brocamp/" class="btn-about">About Brocamp</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="placement-header">
+                    <div class="placement-count">
+                        <span class="placement-number">2379+</span>
+                        <span class="placement-text">Students Placed</span>
+                    </div>
+                    <div class="placement-separator">|</div>
+                    <div class="placement-salary">
+                        <span class="placement-number">40K/month</span>
+                        <span class="placement-text">Avg Salary</span>
+                    </div>
+                </div>
+                <h1>Want to Become a <br><span>Software Engineer</span></h1>
+                <p>If you know how to read and write in English and have the basic knowledge to do addition,
+                    subtraction, multiplication and division, congratulations you too can become a software engineer.
+                </p>
+                <div class="hero-subtitle">What’s your background?</div>
+                <div class="background-options">
+                    <div class="bg-option" id="btn-it">
+                        <span class="indicator"></span>
+                        <span class="text">I'm From IT background</span>
+                    </div>
+                    <div class="bg-option active" id="btn-non-it">
+                        <span class="indicator"></span>
+                        <span class="text">I'm From Non IT background</span>
+                    </div>
+                </div>
+
+                <!-- Dynamic Stats Card -->
+                <div class="stats-card" id="stats-card">
+                    <div class="stats-top-row">
+                        <div class="stats-content">
+                            <div class="stats-number" id="stats-number">1327 Students</div>
+                            <div class="stats-label" id="stats-label">With Non-IT background Have Already Placed From
+                                Brocamp</div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Hero CTA Button -->
+                <button class="btn-primary btn-submit hero-btn">Show Me A Career Path</button>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder for Hero Image -->
+                <div class="image-placeholder">
+                    <img src="No.1 Award.png" alt="No.1 EdTech Award">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Form Image Section -->
+    <!-- Contact Form Section -->
+    <section class="form-section">
+        <div class="container form-wrapper">
+            <div class="form-visual">
+                <h2 class="moved-headline">Talk To Our Career Experts To Help You Find A Suitable Career Path</h2>
+                <!-- Image Placeholder Area -->
+                <div class="image-placeholder-area"></div>
+            </div>
+            <div class="form-content">
+                <form class="contact-form" id="leadForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" name="fullName" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Contact Number" name="phone" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" name="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="background" id="background" required>
+                            <option value="" disabled selected>What best describes you?</option>
+                            <option value="btech">B.Tech</option>
+                            <option value="degree">Degree</option>
+                            <option value="plus_two">Plus Two</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary btn-submit">Talk To Our Career Expert</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-content-wrapper">
+                <div class="video-wrapper">
+                    <iframe class="youtube-frame" width="996" height="560"
+                        src="https://www.youtube.com/embed/3YNspKWK_5A" title="What is Brocamp" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-content-text">
+                    <h2>Do You Want To Know <br>How They Built <br>Their Career? <br><span>Watch This Video</span></h2>
+                    <ul class="video-features">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            12-Month Intensive Training Program
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Available Both In-House And Online
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Motivated Individuals Ready To Work Hard
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            Build A High-Paying Career In Software Engineering
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Our <span>Programs</span></h2>
+            <div class="course-grid">
+                <!-- 1. Web Development -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>Web Development</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- 2. Mobile App Development -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>Mobile App Development</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- 3. Cyber Security -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>Cyber Security</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- 4. AI / Machine Learning -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>AI / Machine Learning</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- 5. Game Development -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>Game Development</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- 6. Data Science -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>Data Science</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- 7. Blockchain -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>Blockchain</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- 8. AR / VR -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>Augmented Reality / Virtual Reality</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- 9. Software Testing -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>Software Testing</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+
+                <!-- 10. DevOps Engineering -->
+                <div class="course-card">
+                    <div class="meta">Duration: 1 Year</div>
+                    <h3>DevOps Engineering</h3>
+                    <p>Kickstart Your Journey As A Full-Stack Web Developer. This Course Teaches You How To Build
+                        Responsive, User-Friendly Websites And Modern…</p>
+                    <a href="#" class="btn-outline">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories-section">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <div class="carousel-container">
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <!-- Original Set -->
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video1.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>John Doe</h3>
+                                <p>Full Stack Developer @ Google</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video2.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Jane Smith</h3>
+                                <p>Software Engineer @ Amazon</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video3.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Mike Ross</h3>
+                                <p>Frontend Dev @ Netflix</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video4.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Rachel Green</h3>
+                                <p>Backend Dev @ Spotify</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video5.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Sarah Lee</h3>
+                                <p>Product Manager @ Meta</p>
+                            </div>
+                        </li>
+
+                        <!-- Duplicated Set for Infinite Scroll -->
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video1.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>John Doe</h3>
+                                <p>Full Stack Developer @ Google</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video2.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Jane Smith</h3>
+                                <p>Software Engineer @ Amazon</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video3.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Mike Ross</h3>
+                                <p>Frontend Dev @ Netflix</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video4.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Rachel Green</h3>
+                                <p>Backend Dev @ Spotify</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video5.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Sarah Lee</h3>
+                                <p>Product Manager @ Meta</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="carousel-container second-row">
+                <div class="carousel-track-container">
+                    <ul class="carousel-track reverse-track">
+                        <!-- Row 2: Success Story 6 -->
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video6.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>David Kim</h3>
+                                <p>DevOps Engineer @ Apple</p>
+                            </div>
+                        </li>
+                        <!-- Row 2: Success Story 7 -->
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video7.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Emily Chen</h3>
+                                <p>Data Scientist @ Uber</p>
+                            </div>
+                        </li>
+                        <!-- Row 2: Success Story 8 -->
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video8.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Chris Pratt</h3>
+                                <p>Cloud Architect @ AWS</p>
+                            </div>
+                        </li>
+                        <!-- Row 2: Success Story 9 -->
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video9.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Jessica Williams</h3>
+                                <p>UI/UX Designer @ Airbnb</p>
+                            </div>
+                        </li>
+                        <!-- Row 2: Success Story 10 -->
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video10.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Robert Brown</h3>
+                                <p>Security Analyst @ Microsoft</p>
+                            </div>
+                        </li>
+
+                        <!-- Duplicated Set for Infinite Scroll (Row 2) -->
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video6.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>David Kim</h3>
+                                <p>DevOps Engineer @ Apple</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video7.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Emily Chen</h3>
+                                <p>Data Scientist @ Uber</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video8.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Chris Pratt</h3>
+                                <p>Cloud Architect @ AWS</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video9.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Jessica Williams</h3>
+                                <p>UI/UX Designer @ Airbnb</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="story-card video-facade-card">
+                                <video src="Videos/Video10.mp4" class="story-thumb-video" muted playsinline
+                                    preload="metadata"></video>
+                                <div class="play-button-small">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="story-info">
+                                <h3>Robert Brown</h3>
+                                <p>Security Analyst @ Microsoft</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
