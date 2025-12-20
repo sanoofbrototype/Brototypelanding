@@ -851,7 +851,7 @@ ul {
     }
 
     .hero-text h1 {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
         font-weight: 700;
         color: #fff;
         text-align: center;
@@ -918,6 +918,12 @@ ul {
         /* Stretch to fill container */
         width: auto;
         justify-content: center;
+    }
+
+    .bg-option .text {
+        white-space: normal;
+        line-height: 1.2;
+        text-align: left;
     }
 
     /* STATS */
