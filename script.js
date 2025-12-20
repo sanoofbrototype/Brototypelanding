@@ -89,13 +89,6 @@ function triggerConfettiFromElement(element) {
     });
 }
 
-// Helper functions loadYouTubeVideo and loadLocalVideo removed as they are no longer used.
-// Main video is now an iframe, and carousel videos use direct HTML5 video element manipulation.
-
-
-// Carousel Logic (Simplified for CSS Marquee)
-// Manual navigation logic removed as we are using CSS animation.
-
 // Hero CTA Scroll Logic
 const heroBtn = document.querySelector('.hero-btn');
 const formSection = document.querySelector('.form-section');
@@ -150,8 +143,6 @@ if (leadForm) {
 }
 
 // Video Cards Click Logic
-// We need to re-select cards because they might be cloned? 
-// No, the HTML duplication happens before this runs, so querySelectorAll should catch all.
 const videoCards = document.querySelectorAll('.video-facade-card');
 videoCards.forEach(card => {
     card.addEventListener('click', function () {
