@@ -214,7 +214,7 @@ ul {
 .hero-text p {
     color: var(--text-secondary);
     font-size: 1.1rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     max-width: 500px;
 }
 
@@ -235,7 +235,15 @@ ul {
     display: flex;
     align-items: center;
     /* Vertical align middle */
+    display: flex;
+    justify-content: center;
+    /* ✅ */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
 }
+
 
 .background-options {
     display: flex;
