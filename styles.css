@@ -240,7 +240,7 @@ ul {
     /* ✅ */
     align-items: center;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
     text-align: center;
 }
 
@@ -803,7 +803,7 @@ ul {
     /* IMAGE */
     .hero-image {
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
         order: 1;
         display: flex;
         justify-content: center;
