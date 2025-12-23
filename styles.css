@@ -249,7 +249,7 @@ ul {
 
 @media (max-width: 768px) {
     .hero-content {
-        gap: 40px;
+        gap: 15px;
         flex-direction: column-reverse;
         text-align: center;
     }
@@ -1951,7 +1951,7 @@ h2 {
 
     /* Overlay effect: Refined underlay, adjusted to 95px */
     .hero {
-        padding: 95px 0 40px 0 !important;
+        padding: 125px 0 40px 0 !important;
     }
 
     /* Center Background Section */
