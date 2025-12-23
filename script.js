@@ -299,5 +299,5 @@ if (heroTrack) {
 
         // Add active class to next
         heroSlides[heroIndex].classList.add('active');
-    }, 8000); // 8 seconds
+    }, 6000); // 6 seconds
 }
