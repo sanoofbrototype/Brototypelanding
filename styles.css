@@ -1438,24 +1438,43 @@ h2 {
     display: flex;
     width: max-content;
     /* Allow track to grow for all items */
-    animation: scroll 30s linear infinite;
-    /* Auto Scroll Animation */
+    /* Ensure overflow for manual scrolling */
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
 
-.carousel-track:hover {
+/* Hide Scrollbar for Chrome/Safari */
+.carousel-track-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    display: flex;
+    width: max-content;
+    /* Animation removed for JS hybrid approach */
+}
+
+/* Hover pause handled by JS now */
+/* .carousel-track:hover {
     animation-play-state: paused;
-}
+} */
 
+/* Keyframes removed - moved to JS logic */
+/*
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-        /* Move half way (since we duplicated items) */
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
+*/
+
 
 .carousel-slide {
     position: relative;

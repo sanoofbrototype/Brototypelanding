@@ -186,3 +186,72 @@ if (mobileToggle) {
         mobileToggle.classList.toggle('open');
     });
 }
+// Video Carousel Hybrid Scroll (Auto + Manual)
+const trackContainers = document.querySelectorAll('.carousel-track-container');
+
+trackContainers.forEach(container => {
+    const track = container.querySelector('.carousel-track');
+    const isReverse = track.classList.contains('reverse-track');
+
+    // Auto-scroll speed
+    const speed = 1; // Pixels per frame
+
+    // State
+    let isPaused = false;
+    let animationId;
+
+    // Interaction Listeners to Pause/Resume
+    container.addEventListener('mouseenter', () => isPaused = true);
+    container.addEventListener('mouseleave', () => isPaused = false);
+    container.addEventListener('touchstart', () => isPaused = true, { passive: true });
+    container.addEventListener('touchend', () => {
+        setTimeout(() => isPaused = false, 1000); // Small delay on mobile before resuming
+    });
+
+    // Setup initial scroll position for reverse track
+    // We need to wait for layout? 
+    // Simplified: Reset logic handles it, but verify alignment.
+    if (isReverse) {
+        // Start reverse track at the "middle" (end of first set) so it can scroll backwards
+        // We rely on the loop check to set it initially if needed, or set it here:
+        // container.scrollLeft = container.scrollWidth / 2;
+    }
+
+    function animate() {
+        if (!isPaused) {
+            const maxScroll = container.scrollWidth / 2; // Assuming content is doubled
+
+            if (isReverse) {
+                // Moving Right (ScrollLeft decreases)
+                container.scrollLeft -= speed;
+                // Loop handling: If we hit 0 (start), jump to middle
+                if (container.scrollLeft <= 0) {
+                    container.scrollLeft = maxScroll;
+                }
+            } else {
+                // Moving Left (ScrollLeft increases)
+                container.scrollLeft += speed;
+                // Loop handling: If we acceptable past the middle, jump to 0
+                if (container.scrollLeft >= maxScroll) {
+                    container.scrollLeft = 0;
+                }
+            }
+        }
+        animationId = requestAnimationFrame(animate);
+    }
+
+    // Initialize Reverse Position immediately if possible/needed
+    // But since scrollWidth might not be ready, we let the loop handle or set it 
+    // safe check: 
+    if (isReverse) {
+        // We need to ensure scrollWidth is available, might need a slight delay or window load
+        // checking periodically in the animation loop is safer for jump logic
+        // But to start "in the middle":
+        setTimeout(() => {
+            container.scrollLeft = container.scrollWidth / 2;
+        }, 100);
+    }
+
+    // Start Loop
+    animate();
+});
