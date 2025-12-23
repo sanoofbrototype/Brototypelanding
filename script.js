@@ -146,6 +146,21 @@ if (leadForm) {
 // Video Cards Click Logic
 const videoCards = document.querySelectorAll('.video-facade-card');
 videoCards.forEach(card => {
+    const video = card.querySelector('.story-thumb-video');
+    const playBtn = card.querySelector('.play-button-small');
+    const container = card.closest('.carousel-track-container');
+
+    if (video) {
+        const resetState = () => {
+            video.controls = false; // Hide native controls
+            if (playBtn) playBtn.style.display = ''; // Show custom play button
+            if (container) container.dataset.isPlaying = "false"; // Resume Scroll
+        };
+
+        video.addEventListener('pause', resetState);
+        video.addEventListener('ended', resetState);
+    }
+
     card.addEventListener('click', function () {
         const video = this.querySelector('.story-thumb-video');
         const playBtn = this.querySelector('.play-button-small');
