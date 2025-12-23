@@ -174,6 +174,47 @@ ul {
     overflow: hidden;
 }
 
+/* Hero Slider Styles (Fade Effect) */
+.hero-slider-container {
+    width: 100%;
+    max-width: 600px;
+    /* Adjust based on original image size */
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+
+.hero-slider-track {
+    display: grid;
+    /* Move to Grid for overlapping */
+    place-items: center;
+    width: 100%;
+}
+
+.hero-slide {
+    grid-area: 1 / 1;
+    /* Stack them on top of each other */
+    width: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    /* Smooth Fade 2s */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
 @media (max-width: 768px) {
     .hero {
         padding: 120px 0 40px 0;

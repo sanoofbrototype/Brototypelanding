@@ -277,3 +277,27 @@ trackContainers.forEach(container => {
     // Start Loop
     animate();
 });
+
+// Hero Image Auto-Slider (Fade Effect - 6 Seconds)
+const heroTrack = document.querySelector('.hero-slider-track');
+if (heroTrack) {
+    let heroIndex = 0;
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const totalHeroSlides = heroSlides.length;
+
+    // Ensure first slide is active initially (handled in HTML, but good safety)
+    if (totalHeroSlides > 0) {
+        heroSlides[0].classList.add('active');
+    }
+
+    setInterval(() => {
+        // Remove active class from current
+        heroSlides[heroIndex].classList.remove('active');
+
+        // Move to next
+        heroIndex = (heroIndex + 1) % totalHeroSlides;
+
+        // Add active class to next
+        heroSlides[heroIndex].classList.add('active');
+    }, 8000); // 8 seconds
+}
