@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #0b0d0f;
+    --bg-color: #000000;
     /* Updated page background from snippet */
     --card-surface: #0f1113;
     /* fallback solid color */
@@ -178,6 +178,8 @@ ul {
 .hero-slider-container {
     width: 100%;
     max-width: 600px;
+    z-index: 2;
+    /* Ensure on top of Santa */
     /* Adjust based on original image size */
     overflow: hidden;
     position: relative;
@@ -213,6 +215,46 @@ ul {
     height: auto;
     object-fit: contain;
     display: block;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 10;
+}
+
+.santa-video-wrapper {
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    bottom: auto;
+    left: auto;
+    right: 82%;
+    /* More tucked under */
+    width: 180px;
+    /* Adjust size */
+    height: auto;
+    z-index: -1;
+    /* Underlay behind image */
+    opacity: 0;
+    /* Hidden State: Tucked TO THE RIGHT (under image) */
+    transform: translateY(-50%) translateX(50px) scale(0.8);
+    transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Slower */
+    pointer-events: none;
+    /* Let clicks pass through */
+}
+
+.santa-video-wrapper.show {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0) scale(1);
+}
+
+.santa-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Remove background if video has one, assuming transparent/matched */
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {

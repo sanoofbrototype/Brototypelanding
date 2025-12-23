@@ -278,17 +278,44 @@ trackContainers.forEach(container => {
     animate();
 });
 
-// Hero Image Auto-Slider (Fade Effect - 6 Seconds)
+// Hero Image Auto-Slider (Fade Effect - 6 Seconds) & Santa Sync
 const heroTrack = document.querySelector('.hero-slider-track');
+const santaWrapper = document.querySelector('.santa-video-wrapper');
+const santaVideo = document.querySelector('.santa-video');
+
 if (heroTrack) {
     let heroIndex = 0;
     const heroSlides = document.querySelectorAll('.hero-slide');
     const totalHeroSlides = heroSlides.length;
 
-    // Ensure first slide is active initially (handled in HTML, but good safety)
+    // Ensure first slide is active initially
     if (totalHeroSlides > 0) {
         heroSlides[0].classList.add('active');
     }
+
+    // Function to play santa animation (Linked to slide change)
+    const playSantaCycle = () => {
+        if (santaWrapper && santaVideo) {
+            // Wait 2 seconds after slide change, then peek
+            setTimeout(() => {
+                santaWrapper.classList.add('show');
+                santaVideo.play().catch(e => { /* Ignore autoplay block */ });
+
+                // Hide after 4 seconds (Slower peek duration)
+                setTimeout(() => {
+                    santaWrapper.classList.remove('show');
+                    // Reset video after fade out
+                    setTimeout(() => {
+                        santaVideo.pause();
+                        santaVideo.currentTime = 0;
+                    }, 3000);
+                }, 4000);
+            }, 2000);
+        }
+    };
+
+    // Initial run (Wait 2s for first slide hold)
+    setTimeout(playSantaCycle, 100);
 
     setInterval(() => {
         // Remove active class from current
@@ -299,5 +326,9 @@ if (heroTrack) {
 
         // Add active class to next
         heroSlides[heroIndex].classList.add('active');
+
+        // Trigger Santa for this new slide
+        playSantaCycle();
+
     }, 6000); // 6 seconds
 }
