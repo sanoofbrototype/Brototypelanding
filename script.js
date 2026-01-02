@@ -188,9 +188,12 @@ if (leadForm) {
         leadForm.style.display = 'none';
         formContent.appendChild(successMessage);
 
-        // Track Lead Event
-        if (typeof fbq === 'function') {
-            fbq('track', 'Lead');
+        // Track Lead Event (Robust Check)
+        if (typeof window.fbq === 'function') {
+            console.log("Firing Meta Pixel 'Lead' Event (Main Form)");
+            window.fbq('track', 'Lead');
+        } else {
+            console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
         }
 
         // Reset form fields after delay (optional, but form/iframe reload might handle it)
@@ -606,9 +609,12 @@ if (popupForm) {
         successMsg.style.display = 'block';
         popupContent.style.backgroundColor = '#000000'; // Make card black
 
-        // Track Lead Event
-        if (typeof fbq === 'function') {
-            fbq('track', 'Lead');
+        // Track Lead Event (Robust Check)
+        if (typeof window.fbq === 'function') {
+            console.log("Firing Meta Pixel 'Lead' Event (Popup Form)");
+            window.fbq('track', 'Lead');
+        } else {
+            console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
         }
 
         // Reset and Restore after 5 seconds
