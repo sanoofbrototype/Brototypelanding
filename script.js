@@ -231,6 +231,13 @@ videoCards.forEach(card => {
         const playBtn = this.querySelector('.play-button-small');
 
         if (video) {
+            // Pause all other videos
+            document.querySelectorAll('.story-thumb-video').forEach(v => {
+                if (v !== video && !v.paused) {
+                    v.pause();
+                }
+            });
+
             // Unmute and Play
             video.muted = false;
             video.controls = true;
