@@ -1601,7 +1601,8 @@ h2 {
     width: 100%;
 }
 
-.form-row {
+.form-row,
+.form-row-new {
     display: flex;
     gap: 15px;
 }
@@ -1741,7 +1742,15 @@ h2 {
 
 /* Fix Intl Input in Popup */
 .popup-content-new .iti {
-    width: 100%;
+    width: 100% !important;
+    display: block !important;
+    max-width: 100% !important;
+}
+
+.popup-content-new .iti input {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 .popup-content-new .iti__flag-container {
