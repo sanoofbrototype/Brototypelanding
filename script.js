@@ -188,6 +188,11 @@ if (leadForm) {
         leadForm.style.display = 'none';
         formContent.appendChild(successMessage);
 
+        // Track Lead Event
+        if (typeof fbq === 'function') {
+            fbq('track', 'Lead');
+        }
+
         // Reset form fields after delay (optional, but form/iframe reload might handle it)
         setTimeout(() => {
             if (successMessage.parentNode) {
@@ -600,6 +605,11 @@ if (popupForm) {
         header.style.display = 'none';
         successMsg.style.display = 'block';
         popupContent.style.backgroundColor = '#000000'; // Make card black
+
+        // Track Lead Event
+        if (typeof fbq === 'function') {
+            fbq('track', 'Lead');
+        }
 
         // Reset and Restore after 5 seconds
         setTimeout(() => {
