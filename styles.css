@@ -2721,3 +2721,19 @@ h2 {
         right: 20px;
     }
 }
+
+/* Mobile Fixes for Country Dropdown Backgrounds */
+@media (max-width: 768px) {
+
+    /* Ensure Main Form Dropdown is Dark */
+    .iti__country-list {
+        background-color: #0f1113 !important;
+        color: #fff !important;
+    }
+
+    /* Ensure Popup Form Dropdown is White */
+    .popup-content-new .iti__country-list {
+        background-color: #ffffff !important;
+        color: #333 !important;
+    }
+}
