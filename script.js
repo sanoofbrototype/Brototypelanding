@@ -171,9 +171,15 @@ if (leadForm) {
 
         // 3. Submit to Zoho Iframe
         if (leadForm.querySelector('[name="aG9uZXlwb3Q"]').value !== '') return;
+        // Track Lead Event (Robust Check) - Fire BEFORE submit
+        if (typeof window.fbq === 'function') {
+            console.log("Firing Meta Pixel 'Lead' Event (Main Form)");
+            window.fbq('track', 'Lead');
+        } else {
+            console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
+        }
+
         leadForm.submit();
-
-
 
         // 5. Show Success UI Immediately
         const formContent = document.querySelector('.form-content');
@@ -187,14 +193,6 @@ if (leadForm) {
         // Hide form and show success
         leadForm.style.display = 'none';
         formContent.appendChild(successMessage);
-
-        // Track Lead Event (Robust Check)
-        if (typeof window.fbq === 'function') {
-            console.log("Firing Meta Pixel 'Lead' Event (Main Form)");
-            window.fbq('track', 'Lead');
-        } else {
-            console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
-        }
 
         // Reset form fields after delay (optional, but form/iframe reload might handle it)
         setTimeout(() => {
@@ -582,6 +580,15 @@ if (popupForm) {
 
         // Submit to Zoho Iframe
         if (popupForm.querySelector('[name="aG9uZXlwb3Q"]').value !== '') return;
+
+        // Track Lead Event (Robust Check) - Fire BEFORE submit
+        if (typeof window.fbq === 'function') {
+            console.log("Firing Meta Pixel 'Lead' Event (Popup Form)");
+            window.fbq('track', 'Lead');
+        } else {
+            console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
+        }
+
         popupForm.submit();
 
 
@@ -608,14 +615,6 @@ if (popupForm) {
         header.style.display = 'none';
         successMsg.style.display = 'block';
         popupContent.style.backgroundColor = '#000000'; // Make card black
-
-        // Track Lead Event (Robust Check)
-        if (typeof window.fbq === 'function') {
-            console.log("Firing Meta Pixel 'Lead' Event (Popup Form)");
-            window.fbq('track', 'Lead');
-        } else {
-            console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
-        }
 
         // Reset and Restore after 5 seconds
         setTimeout(() => {
