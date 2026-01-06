@@ -173,10 +173,7 @@ if (leadForm) {
         if (leadForm.querySelector('[name="aG9uZXlwb3Q"]').value !== '') return;
         // Track Lead Event (Robust Check) - Fire BEFORE submit
         if (typeof window.fbq === 'function') {
-            console.log("Firing Meta Pixel 'Lead' Event (Main Form)");
             window.fbq('track', 'Lead');
-        } else {
-            console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
         }
 
         document.charset = "UTF-8";
@@ -540,10 +537,7 @@ if (popupForm) {
 
         // Track Lead Event (Robust Check) - Fire BEFORE submit
         if (typeof window.fbq === 'function') {
-            console.log("Firing Meta Pixel 'Lead' Event (Popup Form)");
             window.fbq('track', 'Lead');
-        } else {
-            console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
         }
 
         document.charset = "UTF-8";
