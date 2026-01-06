@@ -3,21 +3,22 @@
 // Parse and populate UTM/Tracking parameters from URL
 document.addEventListener('DOMContentLoaded', () => {
     // Map URL params -> Form Input Names
+    // Map URL params -> Form Input Names
     const paramMap = {
         'utm_source': 'LEADCF16',   // Mapped to Zoho Custom Field
         'utm_medium': 'LEADCF17',   // Mapped to Zoho Custom Field
         'utm_campaign': 'LEADCF18', // Mapped to Zoho Custom Field
         'utm_content': 'LEADCF21',  // Mapped to Zoho Custom Field
+        'utm_term': 'LEADCF20',     // Mapped to Zoho Custom Field
+        'ref': 'LEADCF23',          // Mapped to Zoho Custom Field
         'zf_referrer_name': 'zf_referrer_name',
         'zf_redirect_url': 'zf_redirect_url',
         'zc_gad': 'zc_gad',
-        'utm_term': 'utm_term',
         'utm_id': 'utm_id',
         'utm_adgroup': 'utm_adgroup',
         'utm_matchtype': 'utm_matchtype',
         'utm_audience': 'utm_audience',
         'utm_adgroupid': 'utm_adgroupid',
-        'ref': 'ref',
         'utm_network': 'utm_network',
         'utm_placement': 'utm_placement',
         'utm_hp': 'utm_hp'
