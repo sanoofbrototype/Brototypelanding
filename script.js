@@ -646,11 +646,28 @@ window.addEventListener('load', () => {
 
         const stopCourseAutoScroll = () => clearInterval(courseInterval);
 
-        // Initial Start
-        startCourseAutoScroll();
+        // Optimization: Run only when visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCourseAutoScroll();
+                } else {
+                    stopCourseAutoScroll();
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(courseGrid);
 
         // Handle Resize
-        window.addEventListener('resize', startCourseAutoScroll);
+        window.addEventListener('resize', () => {
+            // Restart if visible, check handled inside start func
+            if (window.innerWidth <= 768) {
+                startCourseAutoScroll();
+            } else {
+                stopCourseAutoScroll();
+            }
+        });
 
         // Pause on Interaction
         courseGrid.addEventListener('touchstart', stopCourseAutoScroll, { passive: true });
