@@ -1,5 +1,27 @@
 
 
+// Parse and populate UTM/Tracking parameters from URL
+document.addEventListener('DOMContentLoaded', () => {
+    const trackingParams = [
+        'zf_referrer_name', 'zf_redirect_url', 'zc_gad',
+        'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
+        'utm_id', 'utm_adgroup', 'utm_matchtype', 'utm_audience',
+        'utm_adgroupid', 'ref', 'utm_network', 'utm_placement', 'utm_hp'
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    trackingParams.forEach(paramName => {
+        if (urlParams.has(paramName)) {
+            const value = urlParams.get(paramName);
+            // Update fields in both forms
+            document.querySelectorAll(`input[name="${paramName}"]`).forEach(input => {
+                input.value = value;
+            });
+        }
+    });
+});
+
 // Mobile Menu Placeholder
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
