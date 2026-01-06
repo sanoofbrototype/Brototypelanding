@@ -3,7 +3,6 @@
 // Parse and populate UTM/Tracking parameters from URL
 document.addEventListener('DOMContentLoaded', () => {
     // Map URL params -> Form Input Names
-    // Map URL params -> Form Input Names
     const paramMap = {
         'utm_source': 'LEADCF16',   // Mapped to Zoho Custom Field
         'utm_medium': 'LEADCF17',   // Mapped to Zoho Custom Field
@@ -25,14 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const urlParams = new URLSearchParams(window.location.search);
+    console.log("Tracking: URL Params detected:", window.location.search);
 
     Object.keys(paramMap).forEach(key => {
         if (urlParams.has(key)) {
             const value = urlParams.get(key);
             const inputName = paramMap[key];
+            console.log(`Tracking: Found ${key}=${value}. Mapping to ${inputName}`);
+
             // Update fields in both forms
-            document.querySelectorAll(`input[name="${inputName}"]`).forEach(input => {
+            const inputs = document.querySelectorAll(`input[name="${inputName}"]`);
+            if (inputs.length === 0) {
+                console.warn(`Tracking: No inputs found with name="${inputName}"`);
+            }
+            inputs.forEach(input => {
                 input.value = value;
+                console.log(`Tracking: Populated ${inputName} with value.`);
             });
         }
     });
