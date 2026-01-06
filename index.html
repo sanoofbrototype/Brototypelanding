@@ -23,7 +23,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -120,23 +120,8 @@
                 <button class="btn-primary btn-submit hero-btn">Show Me A Career Path</button>
             </div>
             <div class="hero-image">
-                <!-- Santa Video (Absolute) -->
-                <div class="santa-video-wrapper">
-                    <video src="santa.mp4" playsinline muted class="santa-video" preload="none"></video>
-                </div>
-                <!-- Hero Image Slider -->
-                <div class="hero-slider-container">
-                    <div class="hero-slider-track">
-                        <div class="hero-slide active">
-                            <img src="No.1 Award.webp" alt="No.1 EdTech Award" width="600" height="400"
-                                fetchpriority="high">
-                        </div>
-                        <div class="hero-slide">
-                            <img src="Christmas_Banner.webp" alt="Christmas Banner" width="800" height="400"
-                                loading="lazy">
-                        </div>
-                    </div>
-                </div>
+                <img src="No.1 Award.webp" alt="No.1 EdTech Award" class="hero-award-img" width="600" height="400"
+                    fetchpriority="high">
             </div>
         </div>
     </header>

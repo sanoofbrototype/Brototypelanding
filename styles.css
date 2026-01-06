@@ -2737,3 +2737,14 @@ h2 {
         color: #333 !important;
     }
 }
+
+/* Hero Award Image */
+.hero-award-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    max-width: 600px;
+    /* Restrict max width of the single image */
+    margin: 0 auto;
+}
