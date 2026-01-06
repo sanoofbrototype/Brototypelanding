@@ -24,37 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const urlParams = new URLSearchParams(window.location.search);
-    console.log("Tracking: URL Params detected:", window.location.search);
 
     Object.keys(paramMap).forEach(key => {
         if (urlParams.has(key)) {
             const value = urlParams.get(key);
             const inputName = paramMap[key];
-            console.log(`Tracking: Found ${key}=${value}. Mapping to ${inputName}`);
 
             // Update fields in both forms
             const inputs = document.querySelectorAll(`input[name="${inputName}"]`);
-            if (inputs.length === 0) {
-                console.warn(`Tracking: No inputs found with name="${inputName}"`);
-            }
             inputs.forEach(input => {
                 input.value = value;
-                console.log(`Tracking: Populated ${inputName} with value.`);
             });
         }
     });
 });
 
-// Mobile Menu Toggle Logic
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
 
-if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-}
 
 // Background Selection Logic
 const btnIT = document.getElementById('btn-it');
@@ -245,7 +230,6 @@ if (leadForm) {
     });
 }
 
-// Video Cards Click Logic
 // Video Cards Click Logic
 const videoCards = document.querySelectorAll('.video-facade-card');
 videoCards.forEach(card => {
@@ -634,7 +618,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Mobile Course Carousel Auto-Scroll
 // Mobile Course Carousel Auto-Scroll
 window.addEventListener('load', () => {
     const courseGrid = document.querySelector('.course-grid');

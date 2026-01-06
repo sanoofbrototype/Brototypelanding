@@ -24,7 +24,6 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -164,10 +163,7 @@ ul {
     color: var(--text-primary);
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
+
 
 /* Hero */
 .hero {
@@ -422,8 +418,6 @@ ul {
 }
 
 /* Dynamic Stats Card - Pixel Perfect */
-/* Dynamic Stats Card - Pixel Perfect & Unified */
-/* Dynamic Stats Card - Pixel Perfect & Unified */
 .stats-card {
     margin-top: 15px;
     width: 100%;
@@ -1498,33 +1492,9 @@ h2 {
     .nav-links.active {
         display: flex;
     }
-
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        background-color: white;
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
 }
+
+
 
 /* Popup Modal Styles - Redesigned */
 .popup-modal {
