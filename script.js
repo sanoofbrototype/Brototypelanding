@@ -282,13 +282,25 @@ const mobileToggle = document.getElementById('mobileToggle');
 const navMenu = document.getElementById('navMenu');
 
 // Sticky Scroll Effect
+let lastScrollY = window.scrollY;
+let ticking = false;
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+    lastScrollY = window.scrollY;
+
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            if (lastScrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            ticking = false;
+        });
+
+        ticking = true;
     }
-});
+}, { passive: true });
 
 // Mobile Menu Toggle
 if (mobileToggle) {
