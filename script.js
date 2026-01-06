@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Mobile Menu Placeholder
+// Mobile Menu Toggle Logic
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -145,18 +145,19 @@ const leadForm = document.getElementById('leadForm');
 
 
 // International Telephone Input Initialization
-const phoneInput = document.querySelector("#phone");
-let iti; // Instance variable
-
-if (phoneInput) {
-    iti = window.intlTelInput(phoneInput, {
+const initPhoneInput = (selector) => {
+    const input = document.querySelector(selector);
+    if (!input) return null;
+    return window.intlTelInput(input, {
         initialCountry: "in",
         separateDialCode: true,
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
         preferredCountries: ["in", "ae", "us", "uk"],
         autoPlaceholder: "off",
     });
-}
+};
+
+const iti = initPhoneInput("#phone");
 
 if (leadForm) {
     leadForm.addEventListener('submit', function (e) {
@@ -200,11 +201,7 @@ if (leadForm) {
             if (phoneField) phoneField.value = fullPhone;
         }
 
-        // 2. Handle Name Splitting (Full Name -> First + Last)
-        const fullNameInput = leadForm.querySelector('input[name="Last Name"]'); // We reused this ID
-        const firstNameHidden = leadForm.querySelector('input[name="First Name"]');
-        // This logic is removed as Zoho form now has separate First Name and Last Name fields.
-        // The form directly submits these fields.
+        // 2. Handle Name Splitting - REMOVED (Zoho now handles separate fields)
 
         // 3. Submit to Zoho Iframe
         if (leadForm.querySelector('[name="aG9uZXlwb3Q"]').value !== '') return;
@@ -515,18 +512,7 @@ if (scrollPopup && closeBtn) {
 }
 
 // Popup Phone Input Init
-const popupPhone = document.querySelector("#popupPhoneNew");
-let itiPopup;
-
-if (popupPhone) {
-    itiPopup = window.intlTelInput(popupPhone, {
-        initialCountry: "in",
-        separateDialCode: true,
-        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
-        preferredCountries: ["in", "ae", "us", "uk"],
-        autoPlaceholder: "off",
-    });
-}
+const itiPopup = initPhoneInput("#popupPhoneNew");
 
 // Popup Form Submission
 if (popupForm) {
