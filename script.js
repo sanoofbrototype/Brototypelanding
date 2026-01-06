@@ -179,6 +179,7 @@ if (leadForm) {
             console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
         }
 
+        document.charset = "UTF-8";
         leadForm.submit();
 
         // 5. Show Success UI Immediately
@@ -545,6 +546,7 @@ if (popupForm) {
             console.warn("Meta Pixel 'fbq' is not defined. Event not fired.");
         }
 
+        document.charset = "UTF-8";
         popupForm.submit();
 
 
