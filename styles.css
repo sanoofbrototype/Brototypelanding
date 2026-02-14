@@ -2758,7 +2758,7 @@ h2 {
     h2.moved-headline,
     .moved-headline.reveal.active {
         text-align: left !important;
-        margin-left: 20px !important;
+        margin-left: 0 !important;
         margin-right: 20px !important;
         /* Ensure no other centering affects it */
         justify-content: flex-start !important;
