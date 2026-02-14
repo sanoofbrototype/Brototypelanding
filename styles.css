@@ -1062,7 +1062,8 @@ input:-webkit-autofill:active {
     /* TEXT */
     .hero-text {
         width: 100%;
-        width: 100%;
+        margin-top: 20px;
+        /* Added gap above header text */
 
         display: flex;
         flex-direction: column;
