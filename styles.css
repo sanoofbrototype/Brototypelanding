@@ -301,7 +301,8 @@ ul {
 @media (max-width: 768px) {
     .hero-content {
         gap: 15px;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        /* Text First, Image Second */
         text-align: center;
     }
 }
@@ -1036,7 +1037,8 @@ input:-webkit-autofill:active {
     .hero-image {
         width: 100%;
         margin-bottom: 5px;
-        order: 1;
+        margin-bottom: 5px;
+
         display: flex;
         justify-content: center;
         /* ✅ CENTER */
@@ -1060,7 +1062,8 @@ input:-webkit-autofill:active {
     /* TEXT */
     .hero-text {
         width: 100%;
-        order: 2;
+        width: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
