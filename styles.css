@@ -1017,7 +1017,7 @@ input:-webkit-autofill:active {
 @media (max-width: 768px) {
 
     .hero {
-        padding: 150px 0 40px;
+        padding: 200px 0 40px;
         /* Increased from 100px to avoid navbar overlap */
         background: #000;
         display: flex;
