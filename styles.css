@@ -2755,7 +2755,8 @@ h2 {
 @media (max-width: 768px) {
 
     .form-visual .moved-headline,
-    h2.moved-headline {
+    h2.moved-headline,
+    .moved-headline.reveal.active {
         text-align: left !important;
         margin-left: 20px !important;
         margin-right: 20px !important;
