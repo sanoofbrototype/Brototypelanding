@@ -2763,5 +2763,16 @@ h2 {
         /* Ensure no other centering affects it */
         justify-content: flex-start !important;
         align-items: flex-start !important;
+        width: auto !important;
+        /* Let margins dictate width, or use calc */
+        display: block !important;
+        align-self: stretch !important;
+    }
+
+    .form-visual {
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        width: 100% !important;
     }
 }
