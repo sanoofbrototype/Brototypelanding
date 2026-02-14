@@ -1063,6 +1063,9 @@ input:-webkit-autofill:active {
     .hero-text {
         width: 100%;
         margin-top: 40px;
+        margin-bottom: 30px;
+        /* Gap between text and image */
+
         /* Added gap above header text */
 
         display: flex;
