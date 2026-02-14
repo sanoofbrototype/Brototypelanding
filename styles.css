@@ -1200,11 +1200,7 @@ input:-webkit-autofill:active {
         /* Reduced gap from courses section */
     }
 
-    .moved-headline {
-        text-align: left !important;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+
 
 }
 
@@ -2753,4 +2749,18 @@ h2 {
     max-width: 600px;
     /* Restrict max width of the single image */
     margin: 0 auto;
+}
+
+/* Force Left Alignment for Career Path Text on Mobile */
+@media (max-width: 768px) {
+
+    .form-visual .moved-headline,
+    h2.moved-headline {
+        text-align: left !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        /* Ensure no other centering affects it */
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
 }
