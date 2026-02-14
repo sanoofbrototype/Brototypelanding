@@ -1199,6 +1199,13 @@ input:-webkit-autofill:active {
         padding-top: 30px;
         /* Reduced gap from courses section */
     }
+
+    .moved-headline {
+        text-align: left !important;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
 }
 
 h2 {
