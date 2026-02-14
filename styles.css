@@ -2767,6 +2767,8 @@ h2 {
         /* Let margins dictate width, or use calc */
         display: block !important;
         align-self: stretch !important;
+        transform: none !important;
+        /* Reset any shift */
     }
 
     .form-visual {
